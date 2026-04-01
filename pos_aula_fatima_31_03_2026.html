@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resumo Pós-Aula — Davi — CZK English</title>
+
+  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=tjGHuZphEpn90CIQtjOxtCKG_qY6_Rt1xu5TWBYrOED1qGJNZye_GVnvk4WO0xVRS537yXwSTQu4bhvzZzk1jLog16x15dStMWArQErKAMKXgjHtlxpJTQ5Y25CcNeK85VHH_AM9pBfbjud3o9UOlgLWdHmVWfn8Ra8CxQOChoEucilhjQEL6Ge4Dtf9IXuQRRiPtAYqXhDprSQE6TVfY8e9CjSM2LfQLQCPlHq7pSuK0x4PGZpRQaZpLkLBni-WhCAk-Qc1vyY7VYjcnjFHZQ" charset="UTF-8"></script><style>
+    :root{
+      --page-bg: #f4f7fa;
+      --card-bg: #fff;
+      --accent: #2f86e6;
+      --accent-dark: #1f6fd1;
+      --green: #36b37e;
+      --muted: #6b7280;
+      --border: #e6eef8;
+      --box-radius: 12px;
+      --card-width: 720px;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      padding:0;
+      background:var(--page-bg);
+      font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:48px 20px;
+    }
+
+    .card{
+      width:100%;
+      max-width:var(--card-width);
+      background:var(--card-bg);
+      border-radius:18px;
+      padding:28px;
+      box-shadow:0 6px 22px rgba(33,47,60,0.06);
+      border:1px solid rgba(15,33,64,0.03);
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:12px;
+      margin-bottom:8px;
+    }
+
+    .badge{
+      background:linear-gradient(180deg,#fff,#f2fbff);
+      border:1px solid var(--border);
+      padding:8px 12px;
+      border-radius:999px;
+      color:var(--accent);
+      font-weight:700;
+      font-size:0.85rem;
+    }
+
+    h1{
+      margin:0;
+      font-size:1.3rem;
+      color:#0f1724;
+    }
+
+    .meta{
+      color:var(--muted);
+      font-size:0.92rem;
+      margin-top:6px;
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:10px;
+      border:none;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      cursor:pointer;
+      box-shadow:0 6px 14px rgba(47,134,230,0.12);
+    }
+
+    .btn.secondary{
+      background:#fff;
+      color:var(--accent);
+      border:1px solid var(--border);
+      box-shadow:none;
+    }
+
+    main{margin-top:18px;}
+    section{margin-top:18px;}
+
+    .panel{
+      background:#fbfdff;
+      border-radius:12px;
+      padding:16px;
+      border:1px solid var(--border);
+    }
+
+    .outline-card{
+      border-radius:10px;
+      border:1px solid var(--border);
+      padding:16px;
+      background:#fff;
+    }
+
+    .vocab-grid{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .vocab{
+      flex:1;
+      min-width:220px;
+      border-radius:10px;
+      padding:14px;
+      border:2px solid #dfeefe;
+      background:#fff;
+    }
+
+    .vocab.green{
+      border-color:#c9f3dc;
+      background:#f5fff6;
+    }
+
+    .vocab h3{
+      margin:0;
+      font-size:1rem;
+      color:#154360;
+    }
+
+    .vocab p{
+      margin:8px 0 0 0;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    .media-row{
+      display:flex;
+      gap:14px;
+      margin-top:12px;
+      flex-wrap:wrap;
+    }
+
+    .media-btn{
+      background:#fff;
+      border:1px solid var(--border);
+      padding:12px 16px;
+      border-radius:10px;
+      font-weight:700;
+      color:var(--accent);
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      min-width:200px;
+      justify-content:center;
+    }
+
+    .homework{
+      background:#f3fff6;
+      border:1px solid #d7f5df;
+      border-radius:10px;
+      padding:14px;
+      margin-top:10px;
+    }
+
+    .speaking{
+      margin-top:18px;
+      padding:16px;
+      border-radius:12px;
+      background:linear-gradient(180deg,#ffffff,#fbfdff);
+      border:1px solid var(--border);
+      max-width:640px;
+    }
+
+    .speaking h2{
+      margin:0 0 10px 0;
+      font-size:1.05rem;
+      color:#0f1724;
+    }
+
+    .talk-table{
+      width:100%;
+      border-collapse:collapse;
+      border-radius:10px;
+      overflow:hidden;
+      background:#fff;
+      border:1px solid #e1e9f5;
+      font-size:0.9rem;
+    }
+
+    .talk-table th,
+    .talk-table td{
+      padding:8px 10px;
+      text-align:left;
+    }
+
+    .talk-table th{
+      background:#eef4ff;
+      color:#1b3556;
+      font-weight:700;
+      border-bottom:1px solid #dde6fa;
+    }
+
+    .row-teacher{
+      background:#e7f2ff;
+    }
+
+    .row-student{
+      background:#e8f7ef;
+    }
+
+    .talk-label{
+      font-weight:700;
+    }
+
+    .talk-percent{
+      font-weight:700;
+      color:#0f1724;
+    }
+
+    .talk-time{
+      color:var(--muted);
+    }
+
+    footer{
+      margin-top:20px;
+      color:var(--muted);
+      font-size:0.9rem;
+      text-align:center;
+    }
+
+    @media (max-width:720px){
+      .card{padding:18px;border-radius:14px;}
+      .vocab-grid{flex-direction:column;}
+      .media-row{flex-direction:column;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <article class="card" role="main">
+      <header>
+        <div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <span class="badge">PÓS-AULA</span>
+            <h1>Revisão de gramática e vocabulário</h1>
+          </div>
+          <div class="meta" style="margin-top:8px;">
+            <strong>Professor:</strong> César &nbsp;•&nbsp;
+            <strong>Aluno:</strong> Fatima &nbsp;•&nbsp;
+            <strong>Data:</strong> 31/03/2026
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="#" onclick="window.print();return false;">Imprimir / Salvar PDF</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="panel">
+          <p style="margin:0;font-weight:600;color:#08325a;">
+            Revisão de get expressions, pronomes, information questions, possessive ’s e leitura guiada com foco em compreensão e estrutura.
+          </p>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Resumo da Aula</h2>
+          <div class="outline-card">
+            <p style="margin:0 0 8px 0;">
+              Nesta aula, fizemos uma <strong>revisão guiada</strong> do conteúdo anterior, retomando os textos sobre dificuldades com inglês, diferenças de vocabulário entre países e <em>multi-word verbs</em>. Você relembrou bem ideias principais como <em>reading is no problem for me</em>, a diferença de uso de <em>trainers</em> e o conceito de expressões com mais de uma palavra.
+            </p>
+            <p style="margin:0 0 8px 0;">
+              Depois, revisamos expressões com <strong>get</strong>, especialmente <em>get up</em>, <em>get on the bus</em>, <em>get to work on time</em> e <em>get along with</em>. Também retomamos a diferença entre <strong>subject pronouns</strong> e <strong>object pronouns</strong>, observando exemplos como <em>I like</em> x <em>for me</em> e <em>get along with them</em>.
+            </p>
+            <p style="margin:0 0 8px 0;">
+              Em seguida, trabalhamos leitura e interpretação de perguntas com foco em estrutura. Houve atenção especial para o uso de <strong>do / does</strong> em perguntas no presente, como em <em>What does Paulo say about multi-word verbs?</em>, além de vocabulário de apoio como <em>similar</em>, <em>issues</em>, <em>more</em> e <em>kind</em>.
+            </p>
+            <p style="margin:0 0 8px 0;">
+              Na parte final, revisamos <strong>yes/no questions</strong> e <strong>information questions</strong> com o verbo <em>be</em>, produzindo perguntas como <em>Where’s your father from?</em>, <em>What’s your email?</em>, <em>How old is she?</em> e <em>Who are they?</em>. Também retomamos o uso do <strong>possessive ’s</strong>, diferenciando singular e plural, como em <em>student’s bag</em>, <em>students’ bags</em>, <em>Fatima’s house</em> e <em>Lucas’ house</em>.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Frases usadas em aula</h2>
+          <div class="outline-card">
+            <ul>
+              <li>Do you get along with them?</li>
+              <li>Get on the bus.</li>
+              <li>Get to work on time.</li>
+              <li>What does Paulo say about multi-word verbs?</li>
+              <li>Where’s your father from?</li>
+              <li>What’s your email?</li>
+              <li>How old is she?</li>
+              <li>Who are they?</li>
+              <li>There are different varieties of English.</li>
+              <li>It is similar to Spanish.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Key Vocabulary</h2>
+          <div class="vocab-grid">
+            <div class="vocab">
+              <h3>get along with</h3>
+              <p style="margin-top:8px;font-size:0.92rem;color:var(--muted);">
+                <em>(pt) se dar bem com</em><br>
+                <small>Do you get along with your coworkers?</small>
+              </p>
+            </div>
+            <div class="vocab green">
+              <h3>possessive ’s</h3>
+              <p style="margin-top:8px;font-size:0.92rem;color:var(--muted);">
+                <em>(pt) forma de posse</em><br>
+                <small>This is Lucas’ house.</small>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Vocabulário da aula</h2>
+          <div class="outline-card">
+            <ul>
+              <li><strong>get up</strong> – levantar / se levantar</li>
+              <li><strong>get on the bus</strong> – entrar no ônibus</li>
+              <li><strong>get to work on time</strong> – chegar ao trabalho no horário</li>
+              <li><strong>get along with</strong> – se dar bem com</li>
+              <li><strong>reading</strong> – leitura</li>
+              <li><strong>trainers</strong> – tênis (UK) / treinadores, personal trainers (US, dependendo do contexto)</li>
+              <li><strong>multi-word verbs</strong> – verbos / expressões com mais de uma palavra</li>
+              <li><strong>similar</strong> – parecido</li>
+              <li><strong>issues</strong> – problemas / questões</li>
+              <li><strong>pronunciation</strong> – pronúncia</li>
+              <li><strong>everyday conversation</strong> – conversa do dia a dia</li>
+              <li><strong>normal conversation</strong> – conversa normal</li>
+              <li><strong>different varieties</strong> – variedades diferentes</li>
+              <li><strong>different kinds</strong> – tipos diferentes</li>
+              <li><strong>more than one word</strong> – mais de uma palavra</li>
+              <li><strong>yes/no questions</strong> – perguntas de sim ou não</li>
+              <li><strong>information questions</strong> – perguntas com <em>wh-</em></li>
+              <li><strong>subject pronouns</strong> – pronomes pessoais do sujeito</li>
+              <li><strong>object pronouns</strong> – pronomes objeto</li>
+              <li><strong>email</strong> – e-mail</li>
+              <li><strong>daughter</strong> – filha</li>
+              <li><strong>son</strong> – filho</li>
+              <li><strong>parents</strong> – pais</li>
+              <li><strong>bag</strong> – mochila / bolsa</li>
+              <li><strong>house</strong> – casa</li>
+              <li><strong>more</strong> – mais</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Correções importantes</h2>
+          <div class="outline-card">
+            <ul>
+              <li><strong>Do x Does:</strong> em perguntas no presente, usamos <em>do</em> com <em>I/you/we/they</em> e <em>does</em> com <em>he/she/it</em>. Ex.: <em>What does Paulo say...?</em></li>
+              <li><strong>Pronúncia de does:</strong> foi corrigido o som de <em>does</em>, para não ficar como “dez”.</li>
+              <li><strong>Your x Their x Her:</strong> houve confusão entre posse e referência. Ex.: <em>What’s your email?</em> não é a mesma coisa que perguntar o e-mail dela.</li>
+              <li><strong>Subject pronoun x object pronoun:</strong> <em>I / he / they</em> conjugam o verbo; <em>me / him / them / her</em> aparecem como complemento. Ex.: <em>Do you get along with them?</em></li>
+              <li><strong>Where are you from? / Where’s your father from?</strong> reforçamos que a estrutura correta com o verbo <em>be</em> precisa manter o sujeito certo e a conjugação certa.</li>
+              <li><strong>How old is she?</strong> reforço de que <em>how old</em> vem com o verbo <em>be</em>.</li>
+              <li><strong>Letter x liter:</strong> foi corrigida a pronúncia e o sentido para não confundir <em>letter</em> com <em>liter</em>.</li>
+              <li><strong>Possessive ’s no singular:</strong> <em>student’s bag</em>, <em>teacher’s name</em>, <em>Fatima’s house</em>.</li>
+              <li><strong>Possessive apostrophe no plural:</strong> quando a palavra já termina em <em>s</em> no plural, o apóstrofo vai depois do <em>s</em>. Ex.: <em>students’ bags</em>, <em>parents’ names</em>.</li>
+              <li><strong>Nome próprio terminado em s:</strong> revisamos o padrão usado em aula para nomes como <em>Lucas’ house</em>.</li>
+              <li><strong>Pedir significado no começo:</strong> combinamos que, em exercícios de substituição, vale perguntar o significado de palavras-chave logo no início, como aconteceu com <em>more</em>.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Transcrição &amp; Gravação</h2>
+          <div class="media-row">
+            <a class="media-btn" href="#" role="button">📄 Acessar transcrição</a>
+            <a
+              class="media-btn"
+              href="https://youtu.be/Cmq0uBk1mq4"
+              target="_blank"
+              rel="noopener noreferrer"
+              role="button"
+              style="background:linear-gradient(180deg,#1f6fd1,#2f86e6);color:#fff;border:none;min-width:260px;"
+            >
+              🎥 Assistir gravação (acesso privado)
+            </a>
+          </div>
+        </section>
+
+        <section class="speaking" aria-label="Distribuição de fala">
+          <h2>Tempo de Fala (Talk Time)</h2>
+          <table class="talk-table">
+            <thead>
+              <tr>
+                <th>Quem falou</th>
+                <th>Porcentagem</th>
+                <th>Duração aproximada</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row-teacher">
+                <td><span class="talk-label">César (Professor)</span></td>
+                <td><span class="talk-percent">68%</span></td>
+                <td class="talk-time">~34 minutos</td>
+              </tr>
+              <tr class="row-student">
+                <td><span class="talk-label">Fatima</span></td>
+                <td><span class="talk-percent">32%</span></td>
+                <td class="talk-time">~16 minutos</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Homework</h2>
+          <div class="homework">
+            <p style="margin:0 0 8px 0;">
+              📌 <strong>Lição de casa (como combinado em aula):</strong>
+            </p>
+            <ul style="margin:0 0 6px 18px;padding:0;font-size:0.94rem;color:var(--muted);">
+              <li>Lembrar de ler o pós-aula de 2 a 3x na semana.</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:14px;">
+            <a class="btn" href="https://wa.me" style="background:#25D366;border-radius:10px;box-shadow:none;">
+              💬 Falar comigo no WhatsApp
+            </a>
+          </div>
+        </section>
+
+      </main>
+
+      <footer>
+        <p style="margin:18px 0 0 0;color:var(--muted);font-size:0.9rem;">
+          © 2025 CZK English • Este conteúdo é exclusivo para fins educacionais. • Suporte: czkenglish@gmail.com
+        </p>
+      </footer>
+    </article>
+  </div>
+</body>
+</html>
